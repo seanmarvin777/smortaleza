@@ -259,3 +259,58 @@ body {
 
 /* small helpers */
 a { color: #0b5fff; }
+
+/* Responsive styles for mobile and tablet */
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 8px 8px;
+    }
+    .nav-menu {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        margin-top: 8px;
+    }
+    .nav-link {
+        font-size: 13px;
+        padding: 8px 0;
+    }
+    .resume {
+        grid-template-columns: 1fr;
+        padding: 8px;
+        margin: 8px auto;
+    }
+    .sidebar {
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .photo img {
+        width: 72px;
+        height: 72px;
+    }
+    .name, .title {
+        text-align: left;
+        font-size: 16px;
+    }
+    .content {
+        padding: 10px;
+    }
+    .content h2 {
+        font-size: 14px;
+    }
+    .item h3 {
+        font-size: 13px;
+    }
+    .meta {
+        font-size: 12px;
+    }
+    .downloadBtn {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+}
