@@ -564,30 +564,37 @@ section p:last-child {
         border-radius: 16px;
     }
 }
+
 .about-hero {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 32px;
-    max-width: 1200px;
-    margin: 40px auto 0 auto;
-    padding: 0 20px;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    padding: 2.5rem 1rem 2rem 1rem;
+    background: linear-gradient(90deg, #e3eaff 60%, #f5f8fc 100%);
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(26,35,126,0.08);
 }
+
 .about-hero-text {
     flex: 1 1 350px;
     min-width: 300px;
 }
 .about-hero-title {
-    font-size: 2.7rem;
-    font-weight: 700;
-    color: #0b3d91;
-    margin-bottom: 0.5rem;
-    letter-spacing: 1px;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #1a237e;
+    text-transform: uppercase;
+    margin-bottom: 0.7rem;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    text-shadow: 1px 2px 8px rgba(26,35,126,0.10);
 }
 .about-hero-sub {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     color: #444;
-    margin-bottom: 2.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: 'Montserrat', Arial, sans-serif;
+    opacity: 0.97;
 }
 .about-hero-img {
     flex: 1 1 400px;
@@ -1121,4 +1128,5 @@ footer .footer-socials a:hover {
     }
 }
 }
+
 
