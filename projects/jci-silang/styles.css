@@ -33,6 +33,9 @@
 .awards-pubmat img {
     width: 100%;
     height: 100%;
+    .about-photo-slider {
+        height: 480px;
+    }
     object-fit: fill;
     border-radius: 0;
     display: block;
@@ -178,6 +181,9 @@
     .about-photo-slider {
         height: 80px;
     }
+        .about-photo-slider {
+            height: 520px;
+        }
     .about-photo-slider img.about-slide {
         border-radius: 8px;
     }
