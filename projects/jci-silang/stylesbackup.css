@@ -1,5 +1,4 @@
 /* --- Awards Article Flex Layout --- */
-/* --- Awards Article Flex Layout --- */
 .awards-flex {
     display: flex;
     align-items: stretch;
@@ -34,12 +33,16 @@
 .awards-pubmat img {
     width: 100%;
     height: 100%;
+    .about-photo-slider {
+        height: 480px;
+    }
     object-fit: fill;
     border-radius: 0;
     display: block;
 }
 /* --- Responsive Media Queries --- */
 @media (max-width: 900px) {
+    /* General layout adjustments for tablets and small laptops */
     .awards-flex {
         flex-direction: column;
         gap: 20px;
@@ -47,6 +50,14 @@
     .awards-pubmat {
         width: 100%;
         min-height: 180px;
+    }
+    .welcome-banner-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .welcome-banner-flex .banner-box {
+        max-width: 100%;
+        width: 100%;
     }
     .about-photo-slider {
         height: 320px;
@@ -64,6 +75,7 @@
 }
 
 @media (max-width: 700px) {
+    /* Project grid and article padding for small tablets */
     .project-grid {
         grid-template-columns: 1fr;
         gap: 10px;
@@ -95,6 +107,7 @@
 }
 
 @media (max-width: 600px) {
+    /* Mobile layout and touch-friendly adjustments */
     .site-header {
         flex-direction: column;
         gap: 10px;
@@ -154,14 +167,23 @@
         align-items: flex-start;
     }
     .aside .logo-img {
-        display: none !important;
+        height: 50px;
+        width: 50px;
+        margin-left: 0;
+        align-self: flex-end;
+        margin-top: 16px;
+        object-fit: contain;
     }
 }
 
 @media (max-width: 400px) {
+    /* Extra small devices (phones) */
     .about-photo-slider {
-        height: 420px;
+        height: 80px;
     }
+        .about-photo-slider {
+            height: 520px;
+        }
     .about-photo-slider img.about-slide {
         border-radius: 8px;
     }
@@ -177,7 +199,10 @@
         width: 60%;
     }
     .aside .logo-img {
-        display: none !important;
+        height: 50px;
+        width: 50px;
+        margin-top: 8px;
+        object-fit: contain;
     }
     article {
         padding: 12px 2vw 12px 2vw;
@@ -749,7 +774,7 @@ section p:last-child {
 }
 @media (max-width: 400px) {
     .about-photo-slider {
-        height: 460px;
+        height: 80px;
     }
     .about-photo-slider img.about-slide {
         border-radius: 8px;
@@ -1537,7 +1562,7 @@ footer .footer-socials a:hover {
         gap: 24px;
     }
     .aside .logo-img {
-        display: none !important;
+        height: 80px;
     }
 }
 @media (max-width: 600px) {
@@ -1561,7 +1586,12 @@ footer .footer-socials a:hover {
         align-items: flex-start;
     }
     .aside .logo-img {
-        display: none !important;
+        height: 50px;
+        width: 50px;
+        margin-left: 0;
+        align-self: flex-end;
+        margin-top: 16px;
+        object-fit: contain;
     }
 }
 @media (max-width: 400px) {
@@ -1577,7 +1607,10 @@ footer .footer-socials a:hover {
         width: 60%;
     }
     .aside .logo-img {
-        display: none !important;
+        height: 50px;
+        width: 50px;
+        margin-top: 8px;
+        object-fit: contain;
     }
 }
 
