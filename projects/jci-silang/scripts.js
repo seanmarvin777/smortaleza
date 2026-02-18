@@ -29,3 +29,33 @@ setInterval(() => {
     aboutCurrent = (aboutCurrent + 1) % aboutSlides.length;
     showAboutSlide(aboutCurrent);
 }, 3000);
+
+
+// Responsive platinum-container image activation
+// Add this script to your HTML after the platinum-container markup
+
+document.addEventListener('DOMContentLoaded', function () {
+  const container = document.querySelector('.platinum-container');
+  if (!container) return;
+  const images = container.querySelectorAll('img');
+
+  // Set the first image as active by default
+  if (images.length > 0) {
+    images[0].classList.add('active');
+  }
+
+  images.forEach((img, idx) => {
+    img.addEventListener('mouseenter', function () {
+      images.forEach(i => i.classList.remove('active'));
+      img.classList.add('active');
+    });
+    img.addEventListener('mouseleave', function () {
+      images.forEach(i => i.classList.remove('active'));
+      if (images[0]) images[0].classList.add('active');
+    });
+    img.addEventListener('click', function () {
+      images.forEach(i => i.classList.remove('active'));
+      img.classList.add('active');
+    });
+  });
+});
