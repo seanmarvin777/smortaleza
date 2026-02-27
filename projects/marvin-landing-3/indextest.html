@@ -1,49 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Landing Page</title>
-        <link rel="stylesheet" href="style.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    </head>
-    <body>
-        <section> 
-            
-            <input type="checkbox" id="check">
-                <header>
-                    <a href="indextest.html">
-                    <img class="logo" src="image/logo.png" alt="test"></a>
-                    <div class="navigation">
-                        <a class="active" href="indextest.html">Home</a>
-                        <a class="active2" href="../../index.html">About</a>
-                        <a href="ContactUs.html">Contact</a>
-                    </div>
-                    <label for="check">
-                        <i class="fas fa-bars menu-btn"></i>
-                        <i class="fas fa-times close-btn"></i>                 
-                    </label>
-                </header>
-                <video class="video-slider" src="media/media1.mp4" autoplay muted loop></video>
-                <div class="content">
-                    <div class="info">
-                        <h2>Wake boarding<br><span> Fun and extreme</span></h2>
-                        <p>Wakeboarding is a relatively new development in the world of water sports. It was discovered by a surfer called Tony Finn, who was apparently tired of surfing against calm waves and rarely catching any big ones.</p>
-                        <a href="info.html" class="info-btn">More Info</a>       
-                    </div>
-                    <div class="control">
-                        <audio id="myaudio" src="media/media2.mp3" autoplay loop type="audio/mp3"></audio>
-                        <button id="mutebutton" onclick="toggleMute()">Mute</button>
-                    </div>
-                </div>
-                <div class="media-icons">
-                    <a href="#"><i class="fab fa-facebook"></i>
-                    <a href="#"><i class="fab fa-twitter"></i>
-                    <a href="#"><i class="fab fa-instagram"></i>     
-                </div>
-        </section>
-        <script src="script.js"></script>
-    </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WakeBoarding | Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+<body>
+  <section>
+    <input type="checkbox" id="check" />
 
+    <header>
+      <a href="indextest.html">
+        <img class="logo" src="image/logo.png" alt="WakeBoarding Logo" />
+      </a>
+      <nav class="navigation">
+        <a class="active" href="indextest.html">Home</a>
+        <a href="info.html">About</a>
+        <a href="ContactUs.html">Contact</a>
+      </nav>
+      <label for="check">
+        <i class="fas fa-bars menu-btn"></i>
+        <i class="fas fa-times close-btn"></i>
+      </label>
+    </header>
+
+    <!-- Hero Video Background -->
+    <video class="video-slider" src="media/media1.mp4" autoplay muted loop playsinline></video>
+
+    <!-- Hero Content -->
+    <div class="content">
+      <div class="info">
+        <h2>Wake <br /><span>Boarding</span></h2>
+        <p class="tagline">Fun and Extreme</p>
+        <p class="hero-desc">Wakeboarding is a thrilling water sport invented by Tony Finn — combining the rush of surfing with the freedom of the open water.</p>
+        <a href="info.html" class="info-btn">Discover More</a>
+      </div>
+    </div>
+
+    <!-- Audio Control -->
+    <div class="control">
+      <audio id="myaudio" src="media/media2.mp3" autoplay loop type="audio/mp3"></audio>
+      <button id="mutebutton" onclick="toggleMute()">
+        <i class="fas fa-volume-up"></i> Mute
+      </button>
+    </div>
+
+    <!-- Social Media -->
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <h3>Wake <span>Boarding</span></h3>
+        <p class="footer-links">
+          <a href="indextest.html">Home</a>
+          <a href="info.html">About</a>
+          <a href="ContactUs.html">Contact Us</a>
+        </p>
+        <p class="footer-copy">&copy; 2025 <strong>MarvsTest</strong>. All rights reserved.</p>
+      </div>
+      <div class="footer-center">
+        <div><i class="fas fa-phone"></i><p>+63 912 345 6789</p></div>
+        <div><i class="fas fa-envelope"></i><p>info@example.com</p></div>
+        <div><i class="fas fa-map-marker-alt"></i><p>123 Street, Silang, <span>Cavite, Philippines</span></p></div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About Wakeboarding</span>
+          Wakeboarding is best enjoyed during summer, but can be done year-round as long as waters aren't frozen. A great sport for thrill-seekers of all levels.
+        </p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <script src="script.js"></script>
+</body>
 </html>
-
