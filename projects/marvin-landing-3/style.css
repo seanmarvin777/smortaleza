@@ -171,28 +171,6 @@ header {
   background: var(--secondary);
 }
 
-/* ===== SOCIAL ICONS (hero) ===== */
-.social-icons {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 40px;
-  z-index: 5;
-}
-
-.social-icons a {
-  color: var(--white);
-  font-size: 26px;
-  transition: transform 0.3s, color 0.3s;
-}
-
-.social-icons a:hover {
-  color: var(--accent);
-  transform: scale(1.3);
-}
-
 /* ===== ABOUT BOXES (used in indextest for preview) ===== */
 .container {
   display: flex;
@@ -233,7 +211,7 @@ label { display: none; }
 /* ===== FOOTER ===== */
 .footer-distributed {
   background: #2d2a30;
-  padding: 50px 60px;
+  padding: 40px 60px;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
