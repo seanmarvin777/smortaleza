@@ -18,27 +18,50 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.getElementById('nav-menu');
 
     if (hamburgerBtn && navMenu) {
-        hamburgerBtn.addEventListener('click', () => {
+        let touchFired = false;
+
+        function toggleMenu() {
             const isOpen = navMenu.classList.toggle('open');
             hamburgerBtn.classList.toggle('open', isOpen);
             hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+        }
+
+        function closeMenu() {
+            navMenu.classList.remove('open');
+            hamburgerBtn.classList.remove('open');
+            hamburgerBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        // iOS touch fallback — fires before the 300ms synthetic click
+        hamburgerBtn.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            touchFired = true;
+            toggleMenu();
+        });
+
+        // Desktop click (also fires on iOS if touchend didn't handle it)
+        hamburgerBtn.addEventListener('click', () => {
+            if (touchFired) { touchFired = false; return; }
+            toggleMenu();
         });
 
         // Close menu when a nav link is clicked
         navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('open');
-                hamburgerBtn.classList.remove('open');
-                hamburgerBtn.setAttribute('aria-expanded', 'false');
-            });
+            link.addEventListener('click', closeMenu);
+            link.addEventListener('touchend', closeMenu);
         });
 
-        // Close menu when clicking outside the nav
+        // Close menu when clicking outside the nav (desktop)
         document.addEventListener('click', (e) => {
             if (!hamburgerBtn.closest('nav').contains(e.target)) {
-                navMenu.classList.remove('open');
-                hamburgerBtn.classList.remove('open');
-                hamburgerBtn.setAttribute('aria-expanded', 'false');
+                closeMenu();
+            }
+        });
+
+        // Close menu when tapping outside the nav (iOS — click doesn't fire on non-interactive elements)
+        document.addEventListener('touchstart', (e) => {
+            if (!hamburgerBtn.closest('nav').contains(e.target)) {
+                closeMenu();
             }
         });
     }
