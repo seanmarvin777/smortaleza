@@ -1,68 +1,27 @@
-const slides = document.querySelectorAll('.photo-slideshow .slide');
-let currentSlide = 0;
+// JCI Silang Pasimuno - Combined Scripts
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove('active');
-    if (i === index) slide.classList.add('active');
-  });
+// Generic slideshow function
+function startSlideshow(slides, interval = 4000) {
+    if (!slides || slides.length === 0) return;
+
+    let current = 0;
+    setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+    }, interval);
 }
 
-// Auto slideshow every 3 seconds (only if slides exist)
-if (slides.length > 0) {
-  showSlide(0);
-  setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }, 3000);
-}
+document.addEventListener('DOMContentLoaded', () => {
+    // Hero slideshow (index.html)
+    const heroSlides = document.querySelectorAll('.photo-slideshow .slide');
+    startSlideshow(heroSlides, 4000);
 
-// Simple slider for about-photo-slider
-const aboutSlides = document.querySelectorAll('.about-photo-slider .about-slide');
-let aboutCurrent = 0;
+    // About photo slider
+    const aboutSlides = document.querySelectorAll('.about-photo-slider .about-slide');
+    startSlideshow(aboutSlides, 3500);
 
-function showAboutSlide(idx) {
-  aboutSlides.forEach((slide, i) => {
-    slide.classList.remove('active');
-    if (i === idx) slide.classList.add('active');
-  });
-}
-
-// Auto slider for About page (only if slides exist)
-if (aboutSlides.length > 0) {
-  showAboutSlide(0);
-  setInterval(() => {
-    aboutCurrent = (aboutCurrent + 1) % aboutSlides.length;
-    showAboutSlide(aboutCurrent);
-  }, 3000);
-}
-
-
-// Responsive platinum-container image activation
-// Add this script to your HTML after the platinum-container markup
-
-document.addEventListener('DOMContentLoaded', function () {
-  const container = document.querySelector('.platinum-container');
-  if (!container) return;
-  const images = container.querySelectorAll('img');
-
-  // Set the first image as active by default
-  if (images.length > 0) {
-    images[0].classList.add('active');
-  }
-
-  images.forEach((img, idx) => {
-    img.addEventListener('mouseenter', function () {
-      images.forEach(i => i.classList.remove('active'));
-      img.classList.add('active');
-    });
-    img.addEventListener('mouseleave', function () {
-      images.forEach(i => i.classList.remove('active'));
-      if (images[0]) images[0].classList.add('active');
-    });
-    img.addEventListener('click', function () {
-      images.forEach(i => i.classList.remove('active'));
-      img.classList.add('active');
-    });
-  });
+    // Awards photo rotator
+    const awardPhotos = document.querySelectorAll('.award-photo');
+    startSlideshow(awardPhotos, 3000);
 });
