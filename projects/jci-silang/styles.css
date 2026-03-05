@@ -97,6 +97,8 @@ nav ul li a {
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
     position: relative;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 nav ul li a::after {
@@ -111,7 +113,8 @@ nav ul li a::after {
     transition: width 0.3s ease;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a:active {
     background: rgba(255,255,255,0.08);
     color: var(--gold);
 }

@@ -18,8 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.getElementById('nav-menu');
 
     if (hamburgerBtn && navMenu) {
-        let touchFired = false;
-
         function toggleMenu() {
             const isOpen = navMenu.classList.toggle('open');
             hamburgerBtn.classList.toggle('open', isOpen);
@@ -32,23 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
             hamburgerBtn.setAttribute('aria-expanded', 'false');
         }
 
-        // iOS touch fallback — fires before the 300ms synthetic click
-        hamburgerBtn.addEventListener('touchend', (e) => {
-            e.preventDefault();
-            touchFired = true;
-            toggleMenu();
-        });
+        // touch-action: manipulation on the button removes the 300ms delay,
+        // so a plain click event works reliably on both mobile and desktop.
+        hamburgerBtn.addEventListener('click', toggleMenu);
 
-        // Desktop click (also fires on iOS if touchend didn't handle it)
-        hamburgerBtn.addEventListener('click', () => {
-            if (touchFired) { touchFired = false; return; }
-            toggleMenu();
-        });
-
-        // Close menu when a nav link is clicked
+        // Close menu when a nav link is tapped/clicked
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', closeMenu);
-            link.addEventListener('touchend', closeMenu);
         });
 
         // Close menu when clicking outside the nav (desktop)
@@ -58,12 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close menu when tapping outside the nav (iOS — click doesn't fire on non-interactive elements)
+        // Close menu when tapping outside the nav on iOS —
+        // click doesn't bubble from non-interactive elements, so touchstart is needed.
         document.addEventListener('touchstart', (e) => {
             if (!hamburgerBtn.closest('nav').contains(e.target)) {
                 closeMenu();
             }
-        });
+        }, { passive: true });
     }
 
     // Hero slideshow (index.html)
