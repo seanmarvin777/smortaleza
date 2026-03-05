@@ -13,6 +13,36 @@ function startSlideshow(slides, interval = 4000) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Hamburger menu toggle
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (hamburgerBtn && navMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('open');
+            hamburgerBtn.classList.toggle('open', isOpen);
+            hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        // Close menu when a nav link is clicked
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                hamburgerBtn.classList.remove('open');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Close menu when clicking outside the nav
+        document.addEventListener('click', (e) => {
+            if (!hamburgerBtn.closest('nav').contains(e.target)) {
+                navMenu.classList.remove('open');
+                hamburgerBtn.classList.remove('open');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
     // Hero slideshow (index.html)
     const heroSlides = document.querySelectorAll('.photo-slideshow .slide');
     startSlideshow(heroSlides, 4000);
