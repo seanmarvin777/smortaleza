@@ -57,11 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Hero slideshow (index.html)
     const heroSlides = document.querySelectorAll('.photo-slideshow .slide');
-    startSlideshow(heroSlides, 4000);
+    startSlideshow(heroSlides, 3000);
 
     // About photo slider
     const aboutSlides = document.querySelectorAll('.about-photo-slider .about-slide');
-    startSlideshow(aboutSlides, 3500);
+    startSlideshow(aboutSlides, 3000);
 
     // Awards photo rotator
     const awardPhotos = document.querySelectorAll('.award-photo');
