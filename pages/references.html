@@ -1,16 +1,21 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>References - Sean Marvin</title>
+    <title>References - Sean Marvin Ortaleza</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-brand">Sean Marvin</a>
-            <ul class="nav-menu">
+            <a href="../index.html" class="nav-brand">Sean Marvin</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="site-menu">
                 <li><a href="../index.html" class="nav-link">About Me</a></li>
                 <li><a href="../pages/projects.html" class="nav-link">Projects</a></li>
                 <li><a href="../pages/references.html" class="nav-link active">References</a></li>
@@ -24,7 +29,7 @@
                 <img src="../img/marvin.jpg" alt="Sean Marvin Ortaleza">
             </div>
             <h1 class="name">Sean Marvin Ortaleza</h1>
-            <p class="title">Systems Engineer | Virtual Assistant | Customer Service</p>
+            <p class="title">Systems Engineer | Web Developer | Virtual Assistant</p>
 
             <div class="contact">
                 <h3>Contact</h3>
@@ -32,19 +37,27 @@
                 <p>Email: <a href="mailto:ortalezaseanmarvin@gmail.com">ortalezaseanmarvin@gmail.com</a></p>
                 <p>Phone: +63 956 123 0403</p>
             </div>
-            <br>
+
             <div class="skills">
-                <h3>Skills</h3>
+                <h3>Technical Skills</h3>
                 <ul>
-                    <li>Systems Engineering (Ubuntu, VMware; Streaming & Encoding: OBS, Wirecast, various encoders) </li>
-                    <li>Web & WordPress Design (Elementor, HTML, CSS, JS) </li>
-                    <li>Version Control & Web Hosting (GitHub, GitHub Pages, VS Code)</li>
-                    <li>Data Analysis & Reporting (Microsoft Office, Google Workspace, Canva) </li>
-                    <li>Content Delivery Networks (EDGIO, CDNetworks, Wowza, MistServer) </li>
-                    <li>Customer Support & Client Relations </li>
-                    <li>Virtual Assistance & Lead Generation </li>
-                    <li>Project Management & Leadership </li>
-                    <li>Performance Monitoring & Troubleshooting </li>
+                    <li><strong>Systems Engineering:</strong> Ubuntu (Linux), VMware</li>
+                    <li><strong>Streaming & Encoding:</strong> OBS, Wirecast, various encoders</li>
+                    <li><strong>CDN / Streaming Platforms:</strong> EDGIO, CDNetworks, Wowza, MistServer</li>
+                    <li><strong>Web Development & Design:</strong> HTML, CSS, JavaScript, WordPress, Elementor</li>
+                    <li><strong>Version Control & Deployment:</strong> GitHub, GitHub Pages, Netlify</li>
+                    <li><strong>Database & Backend:</strong> Supabase</li>
+                    <li><strong>Tools & Productivity:</strong> Visual Studio Code, Microsoft Office, Google Workspace, Canva</li>
+                </ul>
+            </div>
+
+            <div class="skills">
+                <h3>Core Competencies</h3>
+                <ul>
+                    <li><strong>Customer Support & Client Relations</strong></li>
+                    <li><strong>Virtual Assistance & Lead Generation</strong></li>
+                    <li><strong>Project Management & Leadership</strong></li>
+                    <li><strong>Performance Monitoring & Troubleshooting</strong></li>
                 </ul>
             </div>
 
@@ -54,18 +67,18 @@
         <main class="content">
             <section class="references">
                 <h2>Character References</h2>
-                
+
                 <div class="reference-item">
                     <h3>Agustine Manaros</h3>
                     <p class="meta">Senior Systems Manager | The Pinnacle Operating Systems Inc.</p>
                     <p class="reference-description">Sean is an exceptionally skilled and dedicated Systems Engineer. His expertise in streaming technologies and ability to troubleshoot complex system issues under pressure made him invaluable to our team. He consistently delivered results and showed great initiative in improving our infrastructure.</p>
-                    <p class="contact-info">Email: <a href="mailto:agustine.manaros@pinnacleosi.com">agustine.manaros@pinnacleosi.com</a> | Phone: +63 906 105 8405 </p>
+                    <p class="contact-info">Email: <a href="mailto:agustine.manaros@pinnacleosi.com">agustine.manaros@pinnacleosi.com</a> | Phone: +63 906 105 8405</p>
                 </div>
 
                 <div class="reference-item">
                     <h3>Benjamin Abadillo Jr.</h3>
                     <p class="meta">Team Leader, System Engineer | The Pinnacle Operating Systems Inc.</p>
-                    <p class="contact-info">Email: <a href="mailto:benjaminabadillo@gmail.com">benjaminabadillo@gmail.com</a> | Phone: 63 917 378 6160</p>
+                    <p class="contact-info">Email: <a href="mailto:benjaminabadillo@gmail.com">benjaminabadillo@gmail.com</a> | Phone: +63 917 378 6160</p>
                 </div>
 
                 <div class="reference-item">
@@ -84,8 +97,7 @@
             </section>
         </main>
     </div>
+
+    <script src="../js/nav.js"></script>
 </body>
 </html>
-
-
-

@@ -1,16 +1,21 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Sean Marvin Ortaleza | Resume</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-brand">Sean Marvin</a>
-            <ul class="nav-menu">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="site-menu">
                 <li><a href="index.html" class="nav-link active">About Me</a></li>
                 <li><a href="./pages/projects.html" class="nav-link">Projects</a></li>
                 <li><a href="./pages/references.html" class="nav-link">References</a></li>
@@ -24,7 +29,7 @@
                 <img src="img/marvin.jpg" alt="Sean Marvin Ortaleza">
             </div>
             <h1 class="name">Sean Marvin Ortaleza</h1>
-            <p class="title">Systems Engineer | Virtual Assistant | Customer Service</p>
+            <p class="title">Systems Engineer | Web Developer | Virtual Assistant</p>
 
             <div class="contact">
                 <h3>Contact</h3>
@@ -32,19 +37,27 @@
                 <p>Email: <a href="mailto:ortalezaseanmarvin@gmail.com">ortalezaseanmarvin@gmail.com</a></p>
                 <p>Phone: +63 956 123 0403</p>
             </div>
-            <br>
+
             <div class="skills">
-                <h3>Skills</h3>
+                <h3>Technical Skills</h3>
                 <ul>
-                    <li>Systems Engineering (Ubuntu, VMware; Streaming & Encoding: OBS, Wirecast, various encoders) </li>
-                    <li>Web & WordPress Design (Elementor, HTML, CSS, JS) </li>
-                    <li>Version Control & Web Hosting (GitHub, GitHub Pages, VS Code)</li>
-                    <li>Data Analysis & Reporting (Microsoft Office, Google Workspace, Canva) </li>
-                    <li>Content Delivery Networks (EDGIO, CDNetworks, Wowza, MistServer) </li>
-                    <li>Customer Support & Client Relations </li>
-                    <li>Virtual Assistance & Lead Generation </li>
-                    <li>Project Management & Leadership </li>
-                    <li>Performance Monitoring & Troubleshooting </li>
+                    <li><strong>Systems Engineering:</strong> Ubuntu (Linux), VMware</li>
+                    <li><strong>Streaming & Encoding:</strong> OBS, Wirecast, various encoders</li>
+                    <li><strong>CDN / Streaming Platforms:</strong> EDGIO, CDNetworks, Wowza, MistServer</li>
+                    <li><strong>Web Development & Design:</strong> HTML, CSS, JavaScript, WordPress, Elementor</li>
+                    <li><strong>Version Control & Deployment:</strong> GitHub, GitHub Pages, Netlify</li>
+                    <li><strong>Database & Backend:</strong> Supabase</li>
+                    <li><strong>Tools & Productivity:</strong> Visual Studio Code, Microsoft Office, Google Workspace, Canva</li>
+                </ul>
+            </div>
+
+            <div class="skills">
+                <h3>Core Competencies</h3>
+                <ul>
+                    <li><strong>Customer Support & Client Relations</strong></li>
+                    <li><strong>Virtual Assistance & Lead Generation</strong></li>
+                    <li><strong>Project Management & Leadership</strong></li>
+                    <li><strong>Performance Monitoring & Troubleshooting</strong></li>
                 </ul>
             </div>
 
@@ -54,19 +67,44 @@
         <main class="content">
             <section class="summary">
                 <h2>Summary</h2>
-                <p>Detail-oriented professional with experience in systems engineering, customer service, and virtual assistance. 
-                Skilled in troubleshooting, project coordination, and data handling, with a strong ability to work under pressure and manage multiple priorities.
-                Effective team collaborator committed to delivering reliable results. 
+                <p>
+                    Results-driven Systems Engineer and support professional with hands-on experience in live streaming infrastructure, customer service, virtual assistance, and web development. Skilled in Ubuntu, VMware, OBS, Wirecast, CDN and streaming platforms, and modern website tools including HTML, CSS, JavaScript, WordPress, and Supabase. Recognized for strong troubleshooting, client communication, and project coordination, with a proven ability to maintain reliable operations, adapt quickly, and deliver high-quality work in fast-paced environments.
                 </p>
             </section>
 
             <section class="experience">
                 <h2>Experience</h2>
+
                 <div class="item">
-                    <h3>Systems Engineer / Streaming Specialist </h3>
-                    <p class="meta">The Pinnacle Operating Systems Inc. | Jul 2024 – Oct 2025 </p>
+                    <h3>Web Developer</h3>
+                    <p class="meta">Freelance / Project-Based | Jan 2026 - Present</p>
                     <ul>
-                        <li>Optimized high-traffic live streaming platforms, significantly improving stability and achieving zero downtime. </li>
+                        <li>Designed and developed responsive websites using HTML, CSS, and JavaScript.</li>
+                        <li>Built landing pages and business websites based on client requirements.</li>
+                        <li>Managed source code and version control using GitHub</li>
+                        <li>Deployed websites via GitHub Pages and Netlify.</li>
+                        <li>Integrated backend services using Supabase (database, storage, authentication).</li>
+                        <li>Collaborated with clients to deliver functional and user-friendly solutions.</li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <h3>Virtual Assistant / Customer Service (Part-Time)</h3>
+                    <p class="meta">US Inspect Group, Inc. | Apr 2026 - Present</p>
+                    <ul>
+                        <li>Handled inbound client calls, identifying needs, concerns, and service requests including termite, radon, and home inspection services.</li>
+                        <li>Coordinated with clients, inspectors, and internal teams to ensure smooth scheduling and service execution based on property requirements.</li>
+                        <li>Scheduled appointments for clients, inspectors, and subcontractors using the ISN system.</li>
+                        <li>Utilized Five9 for call management and Textline for client messaging and communication.</li>
+                        <li>Managed email correspondence, ensuring timely responses and accurate information delivery.</li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <h3>Systems Engineer / Streaming Specialist</h3>
+                    <p class="meta">The Pinnacle Operating Systems Inc. | Jul 2024 - Oct 2025</p>
+                    <ul>
+                        <li>Optimized high-traffic live streaming platforms, significantly improving stability and achieving zero downtime.</li>
                         <li>Diagnosed and resolved system bottlenecks, improving peak concurrent performance.</li>
                         <li>Performed software debugging, upgrades, and maintenance to enhance system efficiency.</li>
                         <li>Configured cloud servers and encoder technologies, increasing stream quality and reliability.</li>
@@ -76,7 +114,7 @@
 
                 <div class="item">
                     <h3>Data Entry & Lead Generation Specialist</h3>
-                    <p class="meta">Infernozilla | Oct 2023 – Jun 2024 </p>
+                    <p class="meta">Infernozilla | Oct 2023 - Jun 2024</p>
                     <ul>
                         <li>Collected and analyzed targeted data from Steam, YouTube, and TikTok to support client marketing strategies.</li>
                         <li>Organized large Excel datasets, improving reporting accuracy and workflow efficiency.</li>
@@ -86,30 +124,31 @@
 
                 <div class="item">
                     <h3>Customer Service Representative</h3>
-                    <p class="meta">Asian Technology Services Inc. | Jan 2019 – Jul 2023</p>
+                    <p class="meta">Asian Technology Services Inc. | Jan 2019 - Jul 2023</p>
                     <ul>
                         <li>Handled customer inquiries and transactions with 98%+ accuracy and confidentiality.</li>
-                        <li>Managed financial-related accounts while following strict compliance standards. </li>
+                        <li>Managed financial-related accounts while following strict compliance standards.</li>
                         <li>Prepared Excel reports and documentation for internal audits.</li>
                         <li>Maintained KPIs despite high-volume daily operations.</li>
                     </ul>
+                </div>
             </section>
-            
-            <section class="Leadership">
+
+            <section class="leadership">
                 <h2>Leadership Experience</h2>
                 <div class="item">
-                    <h3>Local Organization – External Vice President</h3>
-                    <p class="meta">JCI Silang Pasimuno – Junior Chamber International Philippines | Dec 2025 – Present</p>
+                    <h3>Local Organization - External Vice President</h3>
+                    <p class="meta">JCI Silang Pasimuno - Junior Chamber International Philippines | Dec 2025 - Present</p>
                     <ul>
-                        <li>Managed partnerships and external relations for the local JCI chapter</li>
-                        <li>Represented the organization in community, regional, and inter-chapter engagements </li>
-                        <li>Coordinated collaborations, sponsorships, and joint charity initiatives</li>
+                        <li>Managed partnerships and external relations for the local JCI chapter.</li>
+                        <li>Represented the organization in community, regional, and inter-chapter engagements.</li>
+                        <li>Coordinated collaborations, sponsorships, and joint charity initiatives.</li>
                     </ul>
                 </div>
 
                 <div class="item">
-                    <h3>Local Organization – Deputy Secretary</h3>
-                    <p class="meta">JCI Silang Pasimuno – Junior Chamber International Philippines | Dec 2024 – Nov 2025</p>
+                    <h3>Local Organization - Deputy Secretary</h3>
+                    <p class="meta">JCI Silang Pasimuno - Junior Chamber International Philippines | Dec 2024 - Nov 2025</p>
                     <ul>
                         <li>Coordinated community development and youth programs.</li>
                         <li>Prepared annual reports, evaluations, and national submissions.</li>
@@ -117,28 +156,53 @@
                         <li>Improved operational workflows through structured reporting.</li>
                     </ul>
                 </div>
-                <br>
+            </section>
+
             <section class="education">
                 <h2>Education</h2>
                 <div class="item">
                     <h3>Bachelor of Science in Business Administration Major in Business Management</h3>
-                    <p class="meta">Philippine Christian University | 2013 – 2018</p>
+                    <p class="meta">Philippine Christian University | 2013 - 2018</p>
                 </div>
                 <div class="item">
                     <h3>WordPress Design & Development with eCommerce and SEO</h3>
                     <p class="meta">New Generations Academy | Jul 2023</p>
+                </div>
+            </section>
+
+            <section class="references print-only">
+                <h2>Character References</h2>
+
+                <div class="reference-item">
+                    <h3>Agustine Manaros</h3>
+                    <p class="meta">Senior Systems Manager | The Pinnacle Operating Systems Inc.</p>
+                    <p class="reference-description">Sean is an exceptionally skilled and dedicated Systems Engineer. His expertise in streaming technologies and ability to troubleshoot complex system issues under pressure made him invaluable to our team. He consistently delivered results and showed great initiative in improving our infrastructure.</p>
+                    <p class="contact-info">Email: agustine.manaros@pinnacleosi.com | Phone: +63 906 105 8405</p>
+                </div>
+
+                <div class="reference-item">
+                    <h3>Benjamin Abadillo Jr.</h3>
+                    <p class="meta">Team Leader, System Engineer | The Pinnacle Operating Systems Inc.</p>
+                    <p class="contact-info">Email: benjaminabadillo@gmail.com | Phone: +63 917 378 6160</p>
+                </div>
+
+                <div class="reference-item">
+                    <h3>Rodolfo Torres</h3>
+                    <p class="meta">HR Manager | Asian Technology Services Inc.</p>
+                    <p class="reference-description">Sean showed keen attention to detail, excellent organizational skills, and the ability to work independently. His insights into data structure improvements helped streamline our entire reporting process.</p>
+                    <p class="contact-info">Phone: +63 917 107 4611</p>
+                </div>
+
+                <div class="reference-item">
+                    <h3>Roi Carlo Montenegro</h3>
+                    <p class="meta">Regional Vice President | JCI Silang Pasimuno</p>
+                    <p class="reference-description">As Deputy Secretary and External Vice President, Sean brought exceptional leadership, strategic thinking, and commitment to our organization's mission. His ability to manage multiple projects, collaborate with stakeholders, and drive meaningful initiatives demonstrated true professional maturity.</p>
+                    <p class="contact-info">Phone: +63 915 842 0934</p>
+                </div>
             </section>
         </main>
     </div>
+
+    <script src="js/nav.js"></script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
