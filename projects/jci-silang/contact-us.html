@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - JCI Silang Pasimuno</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--
+    <header class="site-header">
+        <img src="jci-logo.png" alt="JCI Logo" class="header-logo">
+        <h1>JCI Silang Pasimuno</h1>
+        <img src="pasimuno-logo.png" alt="Pasimuno Logo" class="header-logo">
+    </header>
+    -->
+
+    <nav>
+        <button type="button" class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="projects.html">Our Projects</a></li>
+            <li><a href="contact-us.html" class="active">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section class="page-hero">
+        <span class="page-hero-badge">Get in Touch</span>
+        <h2>Contact <span>Us</span></h2>
+        <p>Have questions? Want to join our mission? We'd love to hear from you. Reach out and let's create positive change together.</p>
+    </section>
+
+    <main>
+        <section class="contact-intro">
+            <span class="section-tag">Let's Connect</span>
+            <h2 class="section-title">We're Here to Help</h2>
+            <p class="section-sub">Whether you're interested in becoming a member, partnering with us, supporting our projects, or simply learning more about what we do, we're eager to connect with you. Your engagement matters.</p>
+        </section>
+
+        <div class="contact-layout">
+            <div class="contact-form-container">
+                <h3>Send Us a Message</h3>
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Juan Dela Cruz" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="juan@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+63 912 345 6789">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interest">I'm Interested In *</label>
+                        <select id="interest" name="interest" required>
+                            <option value="">Please select...</option>
+                            <option value="membership">Becoming a Member</option>
+                            <option value="volunteer">Volunteering for Projects</option>
+                            <option value="partnership">Partnership Opportunities</option>
+                            <option value="donation">Supporting Through Donations</option>
+                            <option value="inquiry">General Inquiry</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell us more about your interest or inquiry..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info-container">
+                <div class="contact-info-card">
+                    <div class="contact-icon">📧</div>
+                    <h4>Email Us</h4>
+                    <p>jcisilangpasimuno.ph@gmail.com</p>
+                    <p class="contact-note">We typically respond within 24-48 hours</p>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-icon">📱</div>
+                    <h4>Call or Text</h4>
+                    <p>+63 9 123 456 789</p>
+                    <p class="contact-note">Available Monday to Saturday, 9AM-6PM</p>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-icon">📍</div>
+                    <h4>Visit Us</h4>
+                    <p>Silang, Cavite, Philippines</p>
+                    <p class="contact-note">Meeting venue varies by event</p>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-icon">🌐</div>
+                    <h4>Follow Us Online</h4>
+                    <p>Stay updated with our latest projects, events, and announcements on social media</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/silangpasimuno" class="social-btn">Facebook</a>
+                        <a href="https://www.instagram.com/jcisilangpasimuno" class="social-btn">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>JCI Silang Pasimuno</h4>
+                <p>A chapter of Junior Chamber International dedicated to developing young leaders and creating positive change in our community.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="projects.html">Our Projects</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <p>Email: info@jcisilanopasimuno.org</p>
+                <p>Follow us on social media for updates and event announcements.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 JCI Silang Pasimuno. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
